@@ -48,16 +48,16 @@ int main (){
 	login: // Perintah login akan dipanggil oleh syntax "goto"
 	system("cls");
 	printf("   \n");
-    printf("\t\t                        =======================================                      \n");
-    printf("\t\t                                    SELAMAT DATANG\n");
-    printf("\t\t                                         DI\n");
-    printf("\t\t                                      ATM TUBES\n");
-    printf("\t\t                        =======================================                      \n\n");
-    printf("\t\t                         SILAHKAN MASUKKAN NOMOR KARTU DAN PIN");
-    printf("\n\n\t\t\t\t\t       ");
-    printf("NOMOR KARTU ANDA : "); scanf ("%d", &nokartu);
-    printf("\t\t\t\t\t       ");
-    printf("NOMOR PIN ANDA   : "); scanf("%d", &pin);
+    	printf("\t\t                        =======================================                      \n");
+    	printf("\t\t                                    SELAMAT DATANG\n");
+   	printf("\t\t                                         DI\n");
+    	printf("\t\t                                      ATM TUBES\n");
+    	printf("\t\t                        =======================================                      \n\n");
+    	printf("\t\t                         SILAHKAN MASUKKAN NOMOR KARTU DAN PIN");
+    	printf("\n\n\t\t\t\t\t       ");
+    	printf("NOMOR KARTU ANDA : "); scanf ("%d", &nokartu);
+    	printf("\t\t\t\t\t       ");
+   	printf("NOMOR PIN ANDA   : "); scanf("%d", &pin);
 
 		if (nokartu == nokartu1 && pin == fpin1) {
 			getDataNasabah();
@@ -66,7 +66,7 @@ int main (){
 		}
 		else if (i<2) { // diberi kesempatan memasukan PIN sebanyak 3x.
 			printf("  \n\n");
-            printf("\t\t                    *********************************************** \n\n");
+            		printf("\t\t                    *********************************************** \n\n");
 			printf("\t\t                     NOMOR KARTU ATAU PIN YANG ANDA MASUKAN SALAH!\n");
 			printf("\t\t                     SILAHKAN MASUKKAN NOMOR KARTU DAN PIN KEMBALI\n");
 			i=i+1;
@@ -99,7 +99,7 @@ int main (){
 			switch(y2) {
 				case '1': { // Transfer dana ke rekening Bank TUBES
 					printf("  \n");
-                    printf("\t\t\t\t             TRANSFER              \n  ");
+                    			printf("\t\t\t\t             TRANSFER              \n  ");
 					printf("\t\t\t\t   ***  KE REKENING BANK TUBES  ***\n\n");
 					printf("\t\t\t\t Masukan No.Rek Tujuan : "); scanf("%d", &T);
 					system("cls");
@@ -122,10 +122,10 @@ int main (){
 						goto menu;
 					}
 					transferTubes:
-					if (sal < N) {
+					if (sal <= N) {
 						printf("\n\t\t\t    Saldo anda tidak mencukupi. Saldo anda saat ini : Rp.%d,-\n", sal);
 					}
-					else if (sal>=N) {
+					else if (sal > N) {
 						sal = sal - N;
 						printf("\n\t\t\t    Transaksi berhasil. Saldo anda sekarang : Rp.%d,-\n", sal);
 						addElmTab(&Tab1, N);
@@ -134,7 +134,7 @@ int main (){
 				}
 				case '2': { // Transfer dana ke rekening bank lain
 					printf("  \n");
-                    printf("\t\t\t\t             TRANSFER              \n  ");
+                    			printf("\t\t\t\t             TRANSFER              \n  ");
 					printf("\t\t\t\t   ***  KE REKENING BANK LAIN  ***\n\n");
 					printf("\t\t\t\t Masukan No.Rek Tujuan : "); scanf("%d", &T);
 					system("cls");
@@ -149,8 +149,8 @@ int main (){
 					printf("\t\t\t\t  Rekening Tujuan : %d\n\n", T);
 					printf("\t\t\t\t  Jumlah Transfer : %d\n\n", N);
 					printf("\t\t\t\t  Terbilang : "); terbilang(N); printf("Rupiah\n\n");
-                    printf("\t\t\t    Biaya Transfer ke rekening bank lain: Rp.7500,-\n\n");
-                    printf("\t\t\t    Apakah anda ingin melakukan transaksi ini?(y/t) : "); scanf("%s", &y4);
+                    			printf("\t\t\t    Biaya Transfer ke rekening bank lain: Rp.7500,-\n\n");
+                   		 	printf("\t\t\t    Apakah anda ingin melakukan transaksi ini?(y/t) : "); scanf("%s", &y4);
 					if (y4=='y' || y4=='Y'){
 						goto transferlain;
 					}
@@ -159,10 +159,10 @@ int main (){
 					}
 					transferlain:
 					TF=7500; // Biaya transfer ke rekening bank lain
-					if (sal < N) {
+					if (sal <= N) {
 						printf("\n\t\t\t    Saldo anda tidak mencukupi. Saldo anda saat ini : Rp.%d,-\n", sal);
 					}
-					else if (sal>=N) {
+					else if (sal > N) {
 						sal = sal - N - TF;
 						printf("\n\t\t\t    Transaksi berhasil. Saldo anda sekarang : Rp.%d,-\n", sal);
 						addElmTab(&Tab1, N);
@@ -172,18 +172,18 @@ int main (){
 				}
 				case '3': { // Pembayaran PLN
 					printf("  \n");
-                    printf("\t\t\t\t\t         TRANSAKSI \n  ");
+                    			printf("\t\t\t\t\t         TRANSAKSI \n  ");
 				   	printf("\t\t\t\t\t ***  PEMBAYARAN PLN  *** \n\n");
 					printf("\t\t\t\t    Masukan No.ID Pengguna : "); scanf("%d", &T);
 					system("cls");
 					printf("  \n");
-                    printf("\t\t\t\t\t         TRANSAKSI \n  ");
-                    printf("\t\t\t\t\t ***  PEMBAYARAN PLN  *** \n\n");
+                    			printf("\t\t\t\t\t         TRANSAKSI \n  ");
+                    			printf("\t\t\t\t\t ***  PEMBAYARAN PLN  *** \n\n");
 					printf("\t\t\t\t Masukan Nominal yang akan dibayar : "); scanf("%d", &N);
 					system("cls");
 					printf("  \n");
-                    printf("\t\t\t\t\t         TRANSAKSI \n  ");
-                    printf("\t\t\t\t\t ***  PEMBAYARAN PLN  *** \n\n");
+                    			printf("\t\t\t\t\t         TRANSAKSI \n  ");
+                    			printf("\t\t\t\t\t ***  PEMBAYARAN PLN  *** \n\n");
 					printf("\t\t\t\t\t ID Pengguna       : %d\n\n", T);
 					printf("\t\t\t\t\t Jumlah Pembayaran : %d\n\n", N);
 					printf("\t\t\t\t\t Terbilang : "); terbilang(N); printf("Rupiah\n\n");
@@ -195,10 +195,10 @@ int main (){
 						goto menu;
 					}
 					pembayaranPLN:
-					if (sal < N) {
+					if (sal <= N) {
 						printf("\n\t\t\t\t   Saldo anda tidak mencukupi. Saldo anda saat ini : Rp.%d,-\n", sal);
 					}
-					else if (sal>=N) {
+					else if (sal>N) {
 						sal = sal - N;
 							printf("\n\t\t\t\t   Transaksi berhasil. Saldo anda sekarang : Rp.%d,-\n", sal);
 							addElmTab(&Tab1, N);
@@ -207,16 +207,16 @@ int main (){
 			}
 			case '4': { // Pembayaran Pulsa
 				printf("  \n");
-                printf("\t\t\t\t\t         TRANSAKSI \n  ");
+                		printf("\t\t\t\t\t         TRANSAKSI \n  ");
 				printf("\t\t\t\t\t ***  PEMBAYARAN PULSA  *** \n\n");
 				printf("\t\t\t\t\tMasukan No HP : "); scanf("%d", &T);
 				system("cls");
-                printf("  \n");
+				printf("  \n");
 				printf("\t\t\t\t\t         TRANSAKSI \n  ");
 				printf("\t\t\t\t\t ***  PEMBAYARAN PULSA  *** \n\n");
 				printf("\t\t\t\t Masukan Nominal yang akan dibayar : "); scanf("%d", &N);
 				system("cls");
-                printf("  \n");
+                		printf("  \n");
 				printf("\t\t\t\t\t         TRANSAKSI \n  ");
 				printf("\t\t\t\t\t ***  PEMBAYARAN PULSA  *** \n\n");
 				printf("\t\t\t\t\t NO HP        : %d\n\n", T);
@@ -230,10 +230,10 @@ int main (){
 					goto menu;
 				}
 				pembayaranPulsa:
-				if (sal < N) {
+				if (sal <= N) {
 					printf("\n\t\t\t\t   Saldo anda tidak mencukupi. Saldo anda saat ini : Rp.%d,-\n", sal);
 				}
-				else if (sal>=N) {
+				else if (sal > N) {
 					sal = sal - N;
 					printf("\n\t\t\t\t   Transaksi berhasil. Saldo anda sekarang : Rp.%d,-\n", sal);
 					addElmTab(&Tab1, N);
@@ -264,12 +264,12 @@ int main (){
 					jmltarik:
 					system("cls");
 					printf("  \n");
-                    printf("\t\t\t\t\t       TRANSAKSI \n  ");
+					printf("\t\t\t\t\t       TRANSAKSI \n  ");
 					printf("\t\t\t\t\t ***  TARIK TUNAI  ***\n\n");
 					printf("\t\t\t\t Masukan Jumlah yang akan ditarik : "); scanf("%d", &TR);
 					system("cls");
 					printf("  \n");
-                    printf("\t\t\t\t\t       TRANSAKSI \n  ");
+                    			printf("\t\t\t\t\t       TRANSAKSI \n  ");
 					printf("\t\t\t\t\t ***  TARIK TUNAI  ***\n\n");
 					printf("\t\t\t\t\t Jumlah Penarikan : Rp.%d,-\n\n", TR);
 					printf("\t\t\t\t\t Terbilang : "); terbilang(TR); printf("Rupiah\n\n");
@@ -281,13 +281,14 @@ int main (){
 						goto menu;
 					}
 					tarik:
-					if (TR < 50000) {
+					cek = TR % 50000;
+					if (cek != 0) {
 						printf("\n\t\t\t\t   Nominal harus kelipatan Rp.50000,- !");
 						getch();
 						goto jmltarik;
-					} else if (sal < TR) {
+					} else if (cek == 0 && sal <= TR) {
 						printf("\n\t\t\t\t   Saldo anda tidak mencukupi. Saldo anda saat ini : Rp.%d,-\n", sal);
-					} else if (sal >= TR) {
+					} else if (cek == 0 && sal > TR) {
 						sal = sal - TR;
 						printf("\n\t\t\t\t   Transaksi berhasil. Saldo anda sekarang : Rp.%d,-\n", sal);
 						addElmTab(&Tab2, TR);
@@ -330,7 +331,7 @@ int main (){
 				}
 				case '2': { // Mengurutkan transaksi dari yang terbesar hingga terkecil
 					printf("  \n");
-                    printf("\t\t\t\t\t ***  TRANSAKSI  TERBESAR  ***\n");
+			    		printf("\t\t\t\t\t ***  TRANSAKSI  TERBESAR  ***\n");
 					printf("\t\t\t\t\t       * TRANSFER DANA *\n\n");
 					urutBubbleDesc(&Tab1);
 					cetakTabel(Tab1);
@@ -343,7 +344,7 @@ int main (){
 				}
 				case '3': { // Mengurutkan transaksi dari yang terkecil hingga terbesar
 					printf("  \n");
-                    printf("\t\t\t\t\t ***  TRANSAKSI  TERKECIL  ***\n");
+                    			printf("\t\t\t\t\t ***  TRANSAKSI  TERKECIL  ***\n");
 					printf("\t\t\t\t\t       * TRANSFER DANA *\n\n");
 					urutBubbleAsc(&Tab1);
 					cetakTabel(Tab1);
@@ -373,7 +374,7 @@ int main (){
 		}
 		case '5': { // Ganti PIN ATM
 			printf("  \n");
-            printf("\t\t\t\t\t         PELAYANAN \n  ");
+            		printf("\t\t\t\t\t         PELAYANAN \n  ");
 			printf("\t\t\t\t\t ***  GANTI NOMOR PIN  ***\n\n");
 			pinlama:
 			printf("\t\t\t\t\t Masukan PIN lama : "); scanf("%d", &pin);
@@ -395,7 +396,7 @@ int main (){
 			system("cls");
 			fpin1=npin;
 			printf("  \n");
-            printf("\t\t\t\t\t         PELAYANAN \n  ");
+            		printf("\t\t\t\t\t         PELAYANAN \n  ");
 			printf("\t\t\t\t\t ***  GANTI NOMOR PIN  ***\n\n");
 			printf("\t\t\t\t\t    Ganti PIN berhasil.\n");
 			printf("\t\t\t\t\t  Silahkan login kembali.\n");
@@ -406,11 +407,11 @@ int main (){
 		case '6': { // Keluar Dari Program
 			printf("  \n");
 			printf("\t\t                                    ***  EXIT  ***\n\n");
-            printf("\t\t                        ======================================= \n");
-            printf("\t\t                                    TERIMA  KASIH\n");
-            printf("\t\t                                  TELAH MENGGUNAKAN\n");
-            printf("\t\t                                      ATM TUBES\n");
-            printf("\t\t                        ======================================= \n\n\n");
+            		printf("\t\t                        ======================================= \n");
+            		printf("\t\t                                    TERIMA  KASIH\n");
+            		printf("\t\t                                  TELAH MENGGUNAKAN\n");
+           	 	printf("\t\t                                      ATM TUBES\n");
+            		printf("\t\t                        ======================================= \n\n\n");
 			goto exit;
 			break;
 		}
@@ -435,9 +436,9 @@ void getDataNasabah () { //Data Nasabah
 }
 void getMenu() { // Menu utama
 	printf("    \n");
-    printf("\t\t\t                          MENU UTAMA\n");
-    printf("\t\t\t                    PECAHAN UANG RP 50.000\n");
-    printf("\t\t\t             ===================================\n\n");
+	printf("\t\t\t                          MENU UTAMA\n");
+    	printf("\t\t\t                    PECAHAN UANG RP 50.000\n");
+    	printf("\t\t\t             ===================================\n\n");
 	printf("\t\t\t  1. TRANSFER & PEMBAYARAN            4. MUTASI TRANSAKSI \n\n");
 	printf("\t\t\t  2. TARIK TUNAI                      5. GANTI PIN \n\n");
 	printf("\t\t\t  3. CEK SALDO                        6. EXIT\n\n");
