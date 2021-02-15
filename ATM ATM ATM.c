@@ -170,8 +170,8 @@ int main (){
 						sal = sal - N;
 							printf("Transaksi berhasil. Saldo anda sekarang:Rp.%d,-\n", sal);
 							addElmTab(&Tab1, N);
-					break;
 				}
+					break;
 			}
 			case '4': { // Pembayaran Pulsa
 				printf("***** Pembayaran Pulsa *****\n");
