@@ -49,7 +49,7 @@ int main (){
 	system("cls");
 	printf("\t\t\t\t\t\t**** BANK TUBES ****\n");
 	printf ("\t\t\t\t\t      MASUKKAN NO KARTU ANDA :"); scanf ("%d", &nokartu);
-	printf("\t\t\t\t\t      MASUKAN PIN ANDA:\n"); scanf("%d", &pin);
+	printf("\t\t\t\t\t      MASUKAN PIN ANDA:"); scanf("%d", &pin);
 		if (nokartu == nokartu1 && pin == fpin1) {
 			getDataNasabah();
 			Sleep(2000);
