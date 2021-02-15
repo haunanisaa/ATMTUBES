@@ -133,10 +133,10 @@ int main (){
 					}
 					transferlain:
 					TF=7500; // Biaya transfer ke rekening bank lain
-					if (sal < N) {
+					if (sal <= N) {
 						printf("Saldo anda tidak mencukupi. Saldo anda saat ini:Rp.%d,-\n", sal);
 					}
-					else if (sal>=N) {
+					else if (sal>N) {
 						sal = sal - N - TF;
 						printf("Transaksi berhasil. Saldo anda sekarang:Rp.%d,-\n", sal);
 						addElmTab(&Tab1, N);
