@@ -210,7 +210,7 @@ int main (){
 				printf("  \n");
                 		printf("\t\t\t\t\t         TRANSAKSI \n  ");
 				printf("\t\t\t\t\t ***  PEMBAYARAN PULSA  *** \n\n");
-				printf("\t\t\t\t\tMasukan No HP : "); scanf("%d", &T);
+				printf("\t\t\t\t\tMasukan No HP : +62"); scanf("%d", &T);
 				system("cls");
                 		printf("  \n");
 				printf("\t\t\t\t\t         TRANSAKSI \n  ");
@@ -220,7 +220,7 @@ int main (){
                 		printf("  \n");
 				printf("\t\t\t\t\t         TRANSAKSI \n  ");
 				printf("\t\t\t\t\t ***  PEMBAYARAN PULSA  *** \n\n");
-				printf("\t\t\t\t\t NO HP        : %d\n\n", T);
+				printf("\t\t\t\t\t NO HP        : +62%d\n\n", T);
 				printf("\t\t\t\t\t Jumlah Biaya : Rp.%d,-\n\n", N);
 				printf("\t\t\t\t\t Terbilang : "); terbilang(N); printf("Rupiah\n\n");
 				printf("\t\t\t\t   Apakah anda ingin melakukan transaksi ini?(y/t) : "); scanf("%s", &y10);
