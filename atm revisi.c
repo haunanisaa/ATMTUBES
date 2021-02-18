@@ -102,7 +102,7 @@ int main (){
 			switch(pilTf) {
 				case '1': { // Transfer dana ke rekening Bank TUBES
 					printf("  \n");
-                    printf("\t\t\t\t             TRANSFER              \n  ");
+                    			printf("\t\t\t\t             TRANSFER              \n  ");
 					printf("\t\t\t\t   ***  KE REKENING BANK TUBES  ***\n\n");
 					printf("\t\t\t\t Masukan No.Rek Tujuan : "); scanf("%d", &T);
 					system("cls");
@@ -125,9 +125,9 @@ int main (){
 						goto menu;
 					}
 					transferTubes:
-                    cekTf = nomTf > 3000000;
+                    cekTf = nomTf > 5000000;
                     if (cekTf = true){
-                        printf("\n\t\t\t\t Maksimum transfer sebesar Rp.2000000,-!");
+                        printf("\n\t\t\t\t Maksimum transfer sebesar Rp.5000000,-!");
                         printf("\n\t\t\t\t        Silahkan ulangi transaksi\n");
                         getch();
                         goto pilihtransfer;
@@ -144,7 +144,7 @@ int main (){
 				}
 				case '2': { // Transfer dana ke rekening bank lain
 					printf("  \n");
-                    printf("\t\t\t\t             TRANSFER              \n  ");
+                    			printf("\t\t\t\t             TRANSFER              \n  ");
 					printf("\t\t\t\t   ***  KE REKENING BANK LAIN  ***\n\n");
 					printf("\t\t\t\t Masukan No.Rek Tujuan : "); scanf("%d", &T);
 					system("cls");
@@ -159,8 +159,8 @@ int main (){
 					printf("\t\t\t\t  Rekening Tujuan : %d\n\n", T);
 					printf("\t\t\t\t  Jumlah Transfer : %d\n\n", nomTf);
 					printf("\t\t\t\t  Terbilang : "); terbilang(nomTf); printf("Rupiah\n\n");
-                    printf("\t\t\t    Biaya Transfer ke rekening bank lain: Rp.7500,-\n\n");
-                    printf("\t\t\t    Apakah anda ingin melakukan transaksi ini?(y/t) : "); scanf("%s", &pilTrans);
+                    			printf("\t\t\t    Biaya Transfer ke rekening bank lain: Rp.7500,-\n\n");
+                    			printf("\t\t\t    Apakah anda ingin melakukan transaksi ini?(y/t) : "); scanf("%s", &pilTrans);
 					if (pilTrans=='y' || pilTrans=='Y'){
 						goto transferlain;
 					}
@@ -169,13 +169,13 @@ int main (){
 					}
 					transferlain:
 					biayaTf=7500; // Biaya transfer ke rekening bank lain
-					cekTf = nomTf > 3000000;
-                    if (cekTf = true){
-                        printf("\n\t\t\t\t Maksimum transfer sebesar Rp.2000000,-!");
-                        printf("\n\t\t\t\t        Silahkan ulangi transaksi\n");
-                        getch();
-                        goto pilihtransfer;
-                    }
+					cekTf = nomTf > 5000000;
+                    			if (cekTf = true){
+                        		printf("\n\t\t\t\t Maksimum transfer sebesar Rp.5000000,-!");
+                        		printf("\n\t\t\t\t        Silahkan ulangi transaksi\n");
+                        		getch();
+                        		goto pilihtransfer;
+                    			}
 					if (sal <= nomTf) {
 						printf("\n\t\t\t    Saldo anda tidak mencukupi. Saldo anda saat ini : Rp.%d,-\n", sal);
 					}
@@ -189,18 +189,18 @@ int main (){
 				}
 				case '3': { // Pembayaran PLN
 					printf("  \n");
-                    printf("\t\t\t\t\t         TRANSAKSI \n  ");
+                    			printf("\t\t\t\t\t         TRANSAKSI \n  ");
 				   	printf("\t\t\t\t\t ***  PEMBAYARAN PLN  *** \n\n");
 					printf("\t\t\t\t    Masukan No.ID Pengguna : "); scanf("%d", &T);
 					system("cls");
 					printf("  \n");
-                    printf("\t\t\t\t\t         TRANSAKSI \n  ");
-                    printf("\t\t\t\t\t ***  PEMBAYARAN PLN  *** \n\n");
+                    			printf("\t\t\t\t\t         TRANSAKSI \n  ");
+                    			printf("\t\t\t\t\t ***  PEMBAYARAN PLN  *** \n\n");
 					printf("\t\t\t\t Masukan Nominal yang akan dibayar : "); scanf("%d", &nomTf);
 					system("cls");
 					printf("  \n");
-                    printf("\t\t\t\t\t         TRANSAKSI \n  ");
-                    printf("\t\t\t\t\t ***  PEMBAYARAN PLN  *** \n\n");
+                    			printf("\t\t\t\t\t         TRANSAKSI \n  ");
+                    			printf("\t\t\t\t\t ***  PEMBAYARAN PLN  *** \n\n");
 					printf("\t\t\t\t\t ID Pengguna       : %d\n\n", T);
 					printf("\t\t\t\t\t Jumlah Pembayaran : %d\n\n", nomTf);
 					printf("\t\t\t\t\t Terbilang : "); terbilang(nomTf); printf("Rupiah\n\n");
@@ -212,13 +212,13 @@ int main (){
 						goto menu;
 					}
 					pembayaranPLN:
-                    cekTf = nomTf > 2000000;
-                    if (cekTf = true){
-                        printf("\n\t\t\t\t   Maksimum pembayaran sebesar Rp.2000000,-!");
-                        printf("\n\t\t\t\t           Silahkan ulangi transaksi\n");
-                        getch();
-                        goto pilihtransfer;
-                    }
+                    			cekTf = nomTf > 2000000;
+                    			if (cekTf = true){
+                        		printf("\n\t\t\t\t   Maksimum pembayaran sebesar Rp.2000000,-!");
+                        		printf("\n\t\t\t\t           Silahkan ulangi transaksi\n");
+                        		getch();
+                        		goto pilihtransfer;
+                    			}
 					if (sal <= nomTf) {
 						printf("\n\t\t\t\t   Saldo anda tidak mencukupi. Saldo anda saat ini : Rp.%d,-\n", sal);
 					}
@@ -231,16 +231,16 @@ int main (){
 			}
 			case '4': { // Pembayaran Pulsa
 				printf("  \n");
-                printf("\t\t\t\t\t         TRANSAKSI \n  ");
+                		printf("\t\t\t\t\t         TRANSAKSI \n  ");
 				printf("\t\t\t\t\t ***  PEMBELIAN PULSA  *** \n\n");
 				printf("\t\t\t\t\tMasukan No HP : +62"); scanf("%d", &T);
 				system("cls");
-                printf("  \n");
+                		printf("  \n");
 				printf("\t\t\t\t\t         TRANSAKSI \n  ");
 				printf("\t\t\t\t\t ***  PEMBELIAN PULSA  *** \n\n");
 				printf("\t\t\t\t Masukan Nominal yang akan dibayar : "); scanf("%d", &nomTf);
 				system("cls");
-                printf("  \n");
+                		printf("  \n");
 				printf("\t\t\t\t\t         TRANSAKSI \n  ");
 				printf("\t\t\t\t\t ***  PEMBELIAN PULSA  *** \n\n");
 				printf("\t\t\t\t\t NO HP        : +62%d\n\n", T);
@@ -254,13 +254,13 @@ int main (){
 					goto menu;
 				}
 				pembayaranPulsa:
-                cekTf = nomTf > 100000;
-                if (cekTf = true){
-                    printf("\n\t\t\t\t    Maksimum pembelian sebesar Rp.100000,-!");
-                    printf("\n\t\t\t\t           Silahkan ulangi transaksi\n");
-                    getch();
-                    goto pilihtransfer;
-                    }
+                		cekTf = nomTf > 100000;
+               			if (cekTf = true){
+                    		printf("\n\t\t\t\t    Maksimum pembelian sebesar Rp.100000,-!");
+                    		printf("\n\t\t\t\t           Silahkan ulangi transaksi\n");
+                    		getch();
+                    		goto pilihtransfer;
+                    		}
 				if (sal <= nomTf) {
 					printf("\n\t\t\t\t   Saldo anda tidak mencukupi. Saldo anda saat ini : Rp.%d,-\n", sal);
 				}
@@ -315,9 +315,9 @@ int main (){
 					}
 					tarik:
 					cektarik = nomTarik % 50000;
-					if (cektarik != 0 || nomTarik>1000000) {
+					if (cektarik != 0 || nomTarik>5000000) {
 						printf("\n\t\t\t\t Nominal harus kelipatan Rp.50000,- !");
-						printf("\n\t\t\t\t Dan maksimal penarikan Rp.1000000,-!");
+						printf("\n\t\t\t\t Dan maksimal penarikan Rp.5000000,-!");
 						getch();
 						goto jmltarik;
 					} else if (cektarik == 0 && sal <= nomTarik) {
