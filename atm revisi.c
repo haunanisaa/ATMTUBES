@@ -318,6 +318,7 @@ int main (){
 					if (cektarik != 0 || nomTarik>5000000) {
 						printf("\n\t\t\t\t Nominal harus kelipatan Rp.50000,- !");
 						printf("\n\t\t\t\t Dan maksimal penarikan Rp.5000000,-!");
+						printf("\n\t\t\t\t      Silahkan ulangi transaksi!\n");
 						getch();
 						goto jmltarik;
 					} else if (cektarik == 0 && sal <= nomTarik) {
